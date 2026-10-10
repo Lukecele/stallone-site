@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Sylvester Stallone & Rocky Balboa | «Nessuno può colpire duro come la vita»</title>
+  
+  <!-- SEO & Metadata -->
+  <meta name="description" content="«Non è importante come colpisci: l'importante è come sai resistere ai colpi, come incassi e se hai la forza di rialzarti. Così si vince!» Il portale definitivo sui discorsi storici di Rocky Balboa e sulla leggendaria parabola di Sylvester Stallone." />
+  <meta name="keywords" content="Sylvester Stallone, Rocky Balboa, discorso al figlio, restare in piedi alla quindicesima ripresa, Rocky 1, Rocky 6, motivazione, boxe, resilienza, cinema" />
+  <meta name="author" content="Sylvester Stallone Legacy" />
+  <meta name="theme-color" content="#060303" />
+  <link rel="canonical" href="https://stallone-site.vercel.app/" />
+
+  <!-- PWA Manifest & App Icons -->
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Rocky Balboa" />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://stallone-site.vercel.app/" />
+  <meta property="og:title" content="Sylvester Stallone & Rocky Balboa | Il Discorso della Vita" />
+  <meta property="og:description" content="«Se sai quanto vali, vai e prenditi quello che vali!» I discorsi più emozionanti e potenti della storia del cinema." />
+  <meta property="og:image" content="https://stallone-site.vercel.app/assets/og-image.svg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="it_IT" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://stallone-site.vercel.app/" />
+  <meta name="twitter:title" content="Sylvester Stallone & Rocky Balboa | Il Discorso della Vita" />
+  <meta name="twitter:description" content="«Non è importante come colpisci, ma come sai incassare e rialzarti!»" />
+  <meta name="twitter:image" content="https://stallone-site.vercel.app/assets/og-image.svg" />
+
+  <!-- Fonts Google Preconnect & Swap -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
+  
+  <!-- Icone Lucide -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Ambient Atmospheric Backing Glows -->
+  <div class="glow-orb orb-red" aria-hidden="true"></div>
+  <div class="glow-orb orb-gold" aria-hidden="true"></div>
+  <div class="glow-orb orb-smoke" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <nav class="nav-container" aria-label="Navigazione principale">
+    <div class="nav-content">
+      <a href="#" class="nav-logo" aria-label="Torna in cima">
+        <img src="assets/favicon.svg" alt="Gantone da boxe dorato" width="44" height="44" class="logo-img" />
+        <div class="logo-text-group">
+          <span class="logo-title">Sylvester Stallone</span>
+          <span class="logo-sub">Il Mito di Rocky Balboa</span>
+        </div>
+      </a>
+      
+      <div class="nav-links" id="navLinks">
+        <a href="#discorso-padre-figlio" class="nav-link special-link"><i data-lucide="flame"></i> Il Discorso al Figlio</a>
+        <a href="#rocky-1-adriana" class="nav-link">La 15ª Ripresa</a>
+        <a href="#storia-stallone" class="nav-link">La Vera Storia di Sly</a>
+        <a href="#citazioni" class="nav-link">Frasi Iconiche</a>
+        <a href="#video" class="nav-link">Scene Cult</a>
+      </div>
+
+      <a href="#discorso-padre-figlio" class="nav-cta">
+        <i data-lucide="zap"></i>
+        <span>Guarda la Scena</span>
+      </a>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Apri o chiudi il menu di navigazione" aria-expanded="false" aria-controls="mobileDrawer">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer & Overlay -->
+  <div class="mobile-drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+  <div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Menu mobile">
+    <div class="drawer-header">
+      <div class="drawer-brand">
+        <img src="assets/favicon.svg" alt="Gantone da boxe" width="32" height="32" />
+        <span>Rocky Balboa</span>
+      </div>
+      <button class="drawer-close" id="drawerClose" aria-label="Chiudi menu">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <div class="drawer-links">
+      <a href="#discorso-padre-figlio" class="drawer-link"><i data-lucide="flame"></i> Il Discorso al Figlio (Rocky VI)</a>
+      <a href="#rocky-1-adriana" class="drawer-link"><i data-lucide="shield"></i> La 15ª Ripresa (Rocky I)</a>
+      <a href="#storia-stallone" class="drawer-link"><i data-lucide="trophy"></i> La Vera Storia di Stallone</a>
+      <a href="#citazioni" class="drawer-link"><i data-lucide="quote"></i> Frasi Leggendarie</a>
+      <a href="#video" class="drawer-link"><i data-lucide="play-circle"></i> Scene Cult & Iframe</a>
+    </div>
+
+    <div class="drawer-footer">
+      <p class="drawer-quote">«Non è finita finché non è finita.»</p>
+      <span class="drawer-tag">🥊 Un guerriero non si arrende mai</span>
+    </div>
+  </div>
+
+  <!-- HERO SECTION: IL DISCORSO AL FIGLIO (ROCKY BALBOA 2006) -->
+  <header class="hero-rocky" id="discorso-padre-figlio">
+    <div class="container">
+      <div class="rocky-badge-wrap">
+        <div class="rocky-badge">
+          <i data-lucide="flame" class="fire-icon"></i>
+          <span>La Scena che ha Ispirato il Mondo • Rocky Balboa (2006)</span>
+        </div>
+      </div>
+
+      <h1 class="rocky-headline">
+        «TU, IO, NESSUNO PUÒ COLPIRE DURO<br />
+        <span class="fire-gradient">COME FA LA VITA.</span>»
+      </h1>
+
+      <p class="rocky-subhead">
+        Sotto la pioggia di Philadelphia, davanti al suo ristorante, Rocky Balboa pronuncia al figlio Robert il discorso più potente, commovente e formativo mai scritto per il grande schermo. <strong>Una lezione di vita, di resilienza e di autostima senza pari</strong>.
+      </p>
+
+      <!-- CARD MANIFESTO DEL DISCORSO CON VIDEO YOUTUBE HD E TESTO INTEGRALE -->
+      <div class="speech-manifesto-card">
+        <div class="manifesto-grid">
+          
+          <!-- Colonna Video Iframe YouTube HD (Scena Completa in Italiano) -->
+          <div class="video-embed-col">
+            <div class="video-player-frame">
+              <iframe 
+                src="https://www.youtube.com/embed/iAXf67fqBuM?rel=0" 
+                title="Rocky Balboa - Discorso al figlio sull’ AUTOSTIMA (Completo) - Full-Hd - ITA" 
+                loading="eager" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+              </iframe>
+            </div>
+            <div class="video-subtag">
+              <i data-lucide="volume-2"></i>
+              <span>Doppiaggio originale italiano (Massimo Corvo / Rocky)</span>
+            </div>
+          </div>
+
+          <!-- Colonna Trascrizione Verbatim con Callout Emozionale -->
+          <div class="manifesto-text-col">
+            <div class="rocky-corner-tag">
+              <i data-lucide="shield-alert"></i>
+              <span>Il Testo Integrale della Scena</span>
+            </div>
+
+            <div class="quote-rocky-block">
+              <div class="quote-marker" aria-hidden="true">“</div>
+              <p class="quote-rocky-line highlight-lead">
+                «Ehi... il mondo non è tutto rose e fiori. È davvero un postaccio misero e depravato e, per quanto tu ti creda forte, se glielo permetti ti metterà in ginocchio e ti lascerà senza niente per sempre.»
+              </p>
+              <p class="quote-rocky-line">
+                «Né io, né tu, nessuno può colpire duro come fa la vita. Perciò, andando avanti, <strong>non è importante come colpisci: l'importante è come sai resistere ai colpi, come incassi e se una volta a terra hai la forza di rialzarti. Così si vince!</strong>»
+              </p>
+              <p class="quote-rocky-line">
+                «Altrimenti sei morto. Se sai quanto vali, vai e prenditi quello che vali! Ma devi essere pronto a prendere i colpi, e non puoi puntare il dito contro nessuno dicendo: <em>"Non sono quello che volevo essere per colpa sua, o sua, o di chiunque!"</em>»
+              </p>
+              <p class="quote-rocky-line final-punch">
+                «Quello lo fanno i vigliacchi. E tu non lo sei! <strong>Sei molto meglio!</strong>»
+              </p>
+            </div>
+
+            <!-- I 3 Cardini del Discorso -->
+            <div class="fight-pillars">
+              <div class="fight-pillar-item">
+                <div class="fp-icon"><i data-lucide="shield"></i></div>
+                <div>
+                  <strong>Saper Incassare</strong>
+                  <p>La grandezza non sta nel non cadere mai, ma nel trovare sempre la forza di rimettersi in piedi.</p>
+                </div>
+              </div>
+              <div class="fight-pillar-item">
+                <div class="fp-icon"><i data-lucide="crosshair"></i></div>
+                <div>
+                  <strong>Zero Alibi</strong>
+                  <p>Smettere di dare la colpa agli altri o al destino: la responsabilità della tua vita è soltanto tua.</p>
+                </div>
+              </div>
+              <div class="fight-pillar-item">
+                <div class="fp-icon"><i data-lucide="trophy"></i></div>
+                <div>
+                  <strong>Prenditi ciò che Vali</strong>
+                  <p>Conoscere il proprio valore e lottare ogni giorno a testa alta per meritarselo sul campo.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- SEZIONE ROCKY I (1976): IL DISCORSO AD ADRIANA SULLA 15ª RIPRESA -->
+  <section class="section rocky-classic-section" id="rocky-1-adriana">
+    <div class="container">
+      <div class="classic-grid">
+        <div class="classic-text-col">
+          <div class="section-tag-gold">
+            <i data-lucide="heart"></i>
+            <span>Rocky I (1976) • Il Cuore di un Guerriero</span>
+          </div>
+          <h2 class="classic-title">La Notte Prima del Grande Incontro</h2>
+          <p class="classic-lead">
+            È la notte prima del match con il campione del mondo Apollo Creed. Rocky torna nella sua modesta stanza e confessa ad Adriana il suo più intimo terrore, trasformandolo nella più alta dichiarazione di dignità umana.
+          </p>
+
+          <div class="classic-quote-box">
+            <i data-lucide="quote" class="quote-icon-gold"></i>
+            <blockquote>
+              «Non ha importanza vincere o perdere. Tutto quello che voglio fare è <strong>restare in piedi alla quindicesima ripresa</strong>. Nessuno è mai riuscito a resistere con Creed fino alla fine. Se suona quell'ultimo gong e io sarò ancora in piedi, per la prima volta nella mia vita saprò di non essere soltanto un altro bullo di quartiere.»
+            </blockquote>
+          </div>
+
+          <p class="classic-sub">
+            Quel discorso racchiude la vera essenza del capolavoro di Sylvester Stallone: il successo non si misura sul punteggio dei giudici, ma sul coraggio di non cedere un solo millimetro e guardarsi allo specchio con fiero rispetto.
+          </p>
+
+          <div class="round-badges">
+            <div class="rb-item">
+              <span class="rb-num">15</span>
+              <span class="rb-label">Riprese di Cuore Puro</span>
+            </div>
+            <div class="rb-divider"></div>
+            <div class="rb-item">
+              <span class="rb-num">3</span>
+              <span class="rb-label">Premi Oscar (Miglior Film)</span>
+            </div>
+            <div class="rb-divider"></div>
+            <div class="rb-item">
+              <span class="rb-num">1976</span>
+              <span class="rb-label">Anno del Miracolo Cinematografico</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="classic-media-col">
+          <div class="vintage-poster-card">
+            <div class="poster-frame">
+              <img src="assets/images/rocky_vintage_1977.jpg" alt="Rocky 1976 Poster Storico Originale" width="800" height="1066" class="poster-img" loading="lazy" />
+              <div class="poster-overlay"></div>
+              <div class="poster-caption">
+                <span class="pc-tag">Locandina d'Epoca • 1977</span>
+                <p>«La sua intera vita era un milione a uno di possibilità.»</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEZIONE LA VERA STORIA DI SYLVESTER STALLONE: IL RISCATTO ASSOLUTO -->
+  <section class="section bio-section" id="storia-stallone">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag-gold">Dal Nulla alla Leggenda</span>
+        <h2 class="section-title">La Vera Storia di Sylvester Stallone</h2>
+        <p class="section-subtitle">
+          Prima di diventare una delle star più iconiche del pianeta, Sly ha vissuto sulla propria pelle la povertà più disperata. La sua vita reale è il vero film di Rocky.
+        </p>
+      </div>
+
+      <div class="story-timeline-card">
+        <div class="story-grid">
+          <div class="story-visual-col">
+            <div class="stallone-portrait-frame">
+              <img src="assets/images/stallone_venice.jpg" alt="Sylvester Stallone alla Mostra del Cinema" width="700" height="933" class="stallone-img" loading="lazy" />
+              <div class="signature-tag">
+                <img src="assets/images/stallone_signature.svg" alt="Firma Sylvester Stallone" class="sig-svg" />
+              </div>
+            </div>
+          </div>
+
+          <div class="story-content-col">
+            <div class="story-chapter">
+              <div class="chapter-number">01</div>
+              <div class="chapter-info">
+                <h4>La Paralisi Parziale e l'Infanzia Difficile</h4>
+                <p>
+                  Nato a Hell's Kitchen a New York nel 1946, una complicanza al parto gli causò una paresi facciale parziale che ne determinò il celebre modo di parlare biascicato e lo sguardo abbassato, spesso deriso durante i primi provini.
+                </p>
+              </div>
+            </div>
+
+            <div class="story-chapter">
+              <div class="chapter-number">02</div>
+              <div class="chapter-info">
+                <h4>I 106 Dollari in Banca e il Rifiuto Storico</h4>
+                <p>
+                  Nel 1975, ispirato dal match tra Muhammad Ali e il quasi sconosciuto Chuck Wepner, scrive la sceneggiatura di <em>Rocky</em> in sole 84 ore. I produttori gli offrono prima 125.000$ e poi <strong>350.000$ per acquistare il copione</strong>, a patto che il protagonista fosse una star affermata. Nonostante avesse la moglie incinta e solo 106 dollari sul conto corrente, <strong>rifiuta l'offerta pur di essere lui Rocky</strong>.
+                </p>
+              </div>
+            </div>
+
+            <div class="story-chapter">
+              <div class="chapter-number">03</div>
+              <div class="chapter-info">
+                <h4>Il Cane Butkus: Venduto e Riscattato</h4>
+                <p>
+                  Nei momenti più bui, non potendo sfamarlo, fu costretto a vendere il suo amato cane Butkus per 50 dollari fuori da un negozio. Non appena ricevette i primi anticipi per il film, tornò dallo stesso acquirente e lo riacquistò per 1.500 dollari. Butkus recitò poi con lui in <em>Rocky</em> e <em>Rocky II</em>.
+                </p>
+              </div>
+            </div>
+
+            <div class="story-chapter">
+              <div class="chapter-number">04</div>
+              <div class="chapter-info">
+                <h4>Il Trionfo agli Oscar & Il Record Cinematografico</h4>
+                <p>
+                  Costato appena un milione di dollari, <em>Rocky</em> incassa oltre 225 milioni in tutto il mondo, vince 3 Premi Oscar (compreso Miglior Film) e fa di Stallone la terza persona nella storia di Hollywood (dopo Charlie Chaplin e Orson Welles) candidata sia come attore che come sceneggiatore per la stessa pellicola.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEZIONE CITAZIONI INTERATTIVE DELLA SAGA -->
+  <section class="section quotes-section" id="citazioni">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag-gold">Parole Scolpite nella Roccia</span>
+        <h2 class="section-title">Le Frasi Iconiche di Rocky & Sly</h2>
+        <p class="section-subtitle">
+          I dialoghi più memorabili sui sacrifici del ring, sulla disciplina interiore e sul coraggio di non mollare mai.
+        </p>
+      </div>
+
+      <!-- Filtri Categoria Interattivi -->
+      <div class="category-filters" id="categoryFilters" role="tablist" aria-label="Filtra citazioni">
+        <button class="filter-btn active" role="tab" aria-selected="true" data-filter="all">Tutte le Massime</button>
+        <button class="filter-btn" role="tab" aria-selected="false" data-filter="Rocky Balboa (2006)">Rocky VI (2006)</button>
+        <button class="filter-btn" role="tab" aria-selected="false" data-filter="Rocky I (1976)">Rocky I (1976)</button>
+        <button class="filter-btn" role="tab" aria-selected="false" data-filter="Autostima & Responsabilità">Autostima</button>
+        <button class="filter-btn" role="tab" aria-selected="false" data-filter="La Vera Storia di Sly">La Vita di Sly</button>
+      </div>
+
+      <!-- Quotes Cards Grid -->
+      <div class="quotes-grid" id="quote-list" aria-live="polite">
+        <!-- Renderizzato via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- SEZIONE VIDEO SCENE CULT & DISCORSI STORICI (IFRAME) -->
+  <section class="section video-section" id="video">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag-gold">Momenti Indelebili</span>
+        <h2 class="section-title">Scene Cult & Discorsi Emozionanti</h2>
+        <p class="section-subtitle">
+          Guarda direttamente i frammenti più toccanti e celebri della saga, con audio e doppiaggio italiano d'autore.
+        </p>
+      </div>
+
+      <div class="video-grid">
+        <!-- Video 1: Discorso al Figlio -->
+        <div class="video-card">
+          <div class="iframe-container">
+            <iframe 
+              src="https://www.youtube.com/embed/iAXf67fqBuM?rel=0" 
+              title="Rocky Balboa - Discorso al figlio sull’ AUTOSTIMA" 
+              loading="lazy" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="video-info">
+            <div class="video-meta">
+              <span class="badge-cat">Rocky VI (2006)</span>
+              <span class="video-duration"><i data-lucide="flame"></i> Discorso Epocale</span>
+            </div>
+            <h4>«Tu, io, nessuno può colpire duro come fa la vita»</h4>
+            <p>
+              La scena madre di Rocky Balboa: l'insegnamento immortale su come il vero campione sia colui che impara a incassare e rimettersi in cammino.
+            </p>
+          </div>
+        </div>
+
+        <!-- Video 2: Discorso alla Commissione Pugilistica -->
+        <div class="video-card">
+          <div class="iframe-container">
+            <iframe 
+              src="https://www.youtube.com/embed/KGc-B-o2B6I?rel=0" 
+              title="Rocky Balboa Vs Commissione sportiva (2006)" 
+              loading="lazy" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="video-info">
+            <div class="video-meta">
+              <span class="badge-cat">Rocky VI (2006)</span>
+              <span class="video-duration"><i data-lucide="shield"></i> Diritto di Lottare</span>
+            </div>
+            <h4>Rocky davanti alla Commissione: «Nessuno può dirci quando fermarci»</h4>
+            <p>
+              L'arringa indimenticabile contro i burocrati: quando un uomo ha ancora qualcosa dentro da tirare fuori, nessuno ha il diritto di togliergli la speranza.
+            </p>
+          </div>
+        </div>
+
+        <!-- Video 3: Scena Finale Rocky 1976 -->
+        <div class="video-card">
+          <div class="iframe-container">
+            <iframe 
+              src="https://www.youtube.com/embed/nAxU48O0Ln4?rel=0" 
+              title="Unforgettable - Rocky (Scena Finale, 1976) Ita HD" 
+              loading="lazy" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="video-info">
+            <div class="video-meta">
+              <span class="badge-cat">Rocky I (1976)</span>
+              <span class="video-duration"><i data-lucide="heart"></i> L'Urlo ad Adriana</span>
+            </div>
+            <h4>L'Ultimo Gong e il Trionfo dell'Amore: «Adriana!»</h4>
+            <p>
+              La 15ª ripresa è finita: il verdetto dei giudici non conta più niente. Rocky ha dimostrato al mondo intero e a se stesso di essere un vero guerriero.
+            </p>
+          </div>
+        </div>
+
+        <!-- Video 4: La Storia di Sylvester Stallone -->
+        <div class="video-card">
+          <div class="iframe-container">
+            <iframe 
+              src="https://www.youtube.com/embed/WX9hJ7aDoH0?rel=0" 
+              title="Come ha fatto Sylvester Stallone a passare dal NULLA a diventare una LEGGENDA" 
+              loading="lazy" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="video-info">
+            <div class="video-meta">
+              <span class="badge-cat">Biografia & Ispirazione</span>
+              <span class="video-duration"><i data-lucide="trophy"></i> Storia Vera</span>
+            </div>
+            <h4>Dal Baratro al Tetto di Hollywood: Il Miracolo di Sly</h4>
+            <p>
+              Il racconto documentario di come determinazione, fame di riscatto e coerenza assoluta abbiano trasformato uno sconosciuto nel mito del cinema d'azione.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Daily Inspiration Box -->
+  <section class="section inspiration-banner">
+    <div class="container">
+      <div class="inspiration-box">
+        <div class="box-content">
+          <span class="mini-label">
+            <i data-lucide="flame"></i> Pillola di Determinazione Quotidiana
+          </span>
+          <h3 id="dailyQuoteText">«Se sai quanto vali, vai e prenditi quello che vali! Ma devi essere pronto a prendere i colpi!»</h3>
+          <p id="dailyQuoteContext">– Rocky Balboa al figlio Robert</p>
+          <button class="btn btn-primary" id="newQuoteBtn" aria-label="Mostra una nuova citazione di Rocky">
+            <i data-lucide="refresh-cw"></i>
+            <span>Altra Carica da Guerriero</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer con Disclaimer Legale e Privacy -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <img src="assets/favicon.svg" alt="Logo guantone" width="36" height="36" class="logo-img-small" />
+          <div class="logo-text-group">
+            <span class="logo-title">Sylvester Stallone</span>
+            <span class="logo-sub">Il Mito di Rocky Balboa</span>
+          </div>
+        </div>
+        <p class="footer-desc">
+          Portale celebrativo e didattico dedicato al valore della resilienza, alla cultura del duro lavoro e all'eredità motivazionale dei film di Rocky e della vita di Sylvester Stallone.
+        </p>
+        <div class="footer-pill">
+          <span>🥊 «Non è importante come colpisci, ma come sai resistere ai colpi!»</span>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div class="link-col">
+          <strong>Navigazione</strong>
+          <a href="#discorso-padre-figlio">Il Discorso al Figlio</a>
+          <a href="#rocky-1-adriana">La 15ª Ripresa</a>
+          <a href="#storia-stallone">La Storia di Stallone</a>
+          <a href="#citazioni">Frasi Iconiche</a>
+          <a href="#video">Scene Cult</a>
+        </div>
+        <div class="link-col">
+          <strong>I Valori del Ring</strong>
+          <span>Resilienza Senza Alibi</span>
+          <span>Dignità dell'Individuo</span>
+          <span>Il Coraggio di Rimettersi in Piedi</span>
+          <span>Lealtà verso Se Stessi</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sezione Note Legali, Marchi e Fair Use -->
+    <div class="container">
+      <div class="footer-disclaimer-card">
+        <h5><i data-lucide="shield-check"></i> Trasparenza, Proprietà Intellettuale & Note Legali</h5>
+        <p>
+          <strong>Natura del sito:</strong> Portale indipendente a carattere esclusivamente divulgativo, cinematografico, didattico e motivazionale senza fini di lucro.<br />
+          <strong>Assenza di affiliazione:</strong> Il presente sito non è affiliato, autorizzato, sponsorizzato né gestito da Sylvester Stallone, da Metro-Goldwyn-Mayer (MGM), da United Artists, da Warner Bros. Discovery o dai rispettivi aventi diritto.<br />
+          <strong>Proprietà intellettuale e Marchi:</strong> Il nome "Rocky", i titoli dei film, i nomi dei personaggi e i relativi marchi registrati appartengono a Metro-Goldwyn-Mayer Studios Inc. e ai legittimi titolari. Il loro richiamo è effettuato unicamente a scopo identificativo, documentale e di critica culturale in ossequio al principio di <em>nominative fair use</em> e all'art. 20 D.Lgs. 30/2005 (Codice della Proprietà Industriale). I filmati incorporati tramite <code>iframe</code> appartengono ai rispettivi titolari e canali di diffusione pubblica (YouTube), in conformità con la giurisprudenza UE (sentenze CGUE <em>Svensson</em> C-466/12 e <em>BestWater</em> C-348/13).
+        </p>
+        <div class="legal-links-row">
+          <button class="legal-link-btn" id="openPrivacyBtn">Informativa Privacy & Trattamento Dati</button>
+          <span>•</span>
+          <button class="legal-link-btn" id="openCookieBtn">Informativa Cookie & Preferenze</button>
+          <span>•</span>
+          <button class="legal-link-btn" id="openCopyrightBtn">Diritto d'Autore & Fair Use</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container bottom-flex">
+        <p>© 2026 Sylvester Stallone & Rocky Balboa: Portale Motivazionale. PWA Ready • Conforme a GDPR & Direttiva ePrivacy.</p>
+        <button class="back-to-top" id="backToTop" aria-label="Torna in cima alla pagina">
+          <i data-lucide="arrow-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GDPR Cookie Banner -->
+  <div class="cookie-banner" id="cookieBanner" role="region" aria-label="Consenso Cookie e Privacy">
+    <div class="cookie-content">
+      <div class="cookie-icon">
+        <i data-lucide="cookie"></i>
+      </div>
+      <div class="cookie-text">
+        <h4>Tutela della Privacy & Cookie</h4>
+        <p>
+          Questo portale utilizza esclusivamente cookie tecnici essenziali e il Service Worker per garantire la fruizione offline e la massima velocità. Non utilizziamo cookie di profilazione proprietari. I video incorporati da YouTube sono configurati nel rispetto della tua privacy. Consulta l'Informativa per i dettagli.
+        </p>
+        <div class="cookie-actions">
+          <button class="btn-cookie-accept" id="acceptCookiesBtn">Accetto e Chiudi</button>
+          <button class="btn-cookie-reject" id="rejectCookiesBtn">Solo Tecnici</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modale Legale Dettagliata -->
+  <div class="legal-modal-overlay" id="legalModalOverlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="legalModalTitle">
+    <div class="legal-modal">
+      <div class="modal-header">
+        <h3 id="legalModalTitle"><i data-lucide="shield"></i> Informativa Legale, Privacy & Cookie</h3>
+        <button class="modal-close-btn" id="closeLegalModal" aria-label="Chiudi finestra modale">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <h4>1. Finalità e Titolarità del Portale</h4>
+        <p>
+          Questo sito web è un progetto no-profit a scopo meramente culturale, cinematografico e motivazionale. Non prevede registrazione utenti, né vendita di merchandising o servizi commerciali.
+        </p>
+
+        <h4>2. Cookie & Service Worker PWA</h4>
+        <p>
+          In conformità al Regolamento UE 2016/679 (GDPR) e alla direttiva ePrivacy:
+        </p>
+        <ul>
+          <li><strong>Cookie Tecnici:</strong> Memorizzazione locale della preferenza cookie (<code>rocky_cookie_consent_v1</code>) e Service Worker per navigazione offline.</li>
+          <li><strong>Iframe di Terze Parti (YouTube):</strong> I player sono incorporati utilizzando domini con privacy accresciuta e parametri standard.</li>
+          <li><strong>Zero Profilazione Proprietaria:</strong> Nessun dato personale viene profilato o venduto a terze parti.</li>
+        </ul>
+
+        <h4>3. Diritto d'Autore, Citazione e Fair Use Cinematografico</h4>
+        <p>
+          Le citazioni dai film <em>Rocky</em> (1976), <em>Rocky Balboa</em> (2006) e altri capitoli della saga sono riportate ad uso didattico, critico e commemorativo, in conformità con l'art. 70 della Legge 633/1941 sul diritto d'autore e con i principi internazionali di <em>fair quotation</em>.
+        </p>
+
+        <h4>4. Procedura di Rimozione (Notice & Take Down)</h4>
+        <p>
+          I titolari dei diritti che desiderassero la modifica o rimozione di specifici contenuti possono inviare una segnalazione, alla quale si darà tempestivo e immediato riscontro.
+        </p>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-cookie-accept" id="modalDismissBtn">Ho Compreso</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

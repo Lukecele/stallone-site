@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050303"/>
+      <stop offset="50%" stop-color="#120808"/>
+      <stop offset="100%" stop-color="#030101"/>
+    </linearGradient>
+    <linearGradient id="fire" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FCD34D"/>
+      <stop offset="50%" stop-color="#F97316"/>
+      <stop offset="100%" stop-color="#EF4444"/>
+    </linearGradient>
+    <radialGradient id="ringLight" cx="80%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#EF4444" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#EF4444" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1000" cy="200" r="400" fill="url(#ringLight)"/>
+
+  <!-- Golden Ring Border -->
+  <rect x="30" y="30" width="1140" height="570" rx="20" fill="none" stroke="rgba(249,115,22,0.4)" stroke-width="2"/>
+
+  <!-- Badge Top -->
+  <g transform="translate(80, 80)">
+    <rect width="48" height="48" rx="12" fill="#1C0A0A" stroke="#EF4444" stroke-width="1.5"/>
+    <text x="24" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="20" fill="#FCD34D" text-anchor="middle">SS</text>
+    <text x="65" y="31" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="20" fill="#FFF" letter-spacing="1">SYLVESTER STALLONE</text>
+    <text x="325" y="31" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="16" fill="#F97316">• IL MITO DI ROCKY BALBOA</text>
+  </g>
+
+  <!-- Main Quotes -->
+  <text x="80" y="225" font-family="'Playfair Display', Georgia, serif" font-weight="800" font-size="46" fill="#FFFFFF">
+    «NESSUNO PUÒ COLPIRE DURO
+  </text>
+  <text x="80" y="285" font-family="'Playfair Display', Georgia, serif" font-weight="800" font-size="46" fill="url(#fire)">
+    COME FA LA VITA.»
+  </text>
+
+  <!-- Subtitle -->
+  <text x="80" y="360" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="22" fill="#E2E8F0">
+    «Non è importante come colpisci: l'importante è come sai resistere ai colpi,»
+  </text>
+  <text x="80" y="395" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="22" fill="#E2E8F0">
+    «come incassi e se una volta a terra hai la forza di rialzarti. Così si vince!»
+  </text>
+
+  <!-- Badges footer -->
+  <g transform="translate(80, 480)">
+    <rect width="210" height="46" rx="23" fill="rgba(255,255,255,0.06)" stroke="rgba(249,115,22,0.3)"/>
+    <text x="105" y="28" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="15" fill="#FCD34D" text-anchor="middle">🥊 Il Discorso al Figlio (Rocky VI)</text>
+
+    <rect x="230" width="220" height="46" rx="23" fill="rgba(255,255,255,0.06)" stroke="rgba(239,68,68,0.3)"/>
+    <text x="340" y="28" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="15" fill="#F87171" text-anchor="middle">🏆 Restare in Piedi (Rocky I)</text>
+
+    <rect x="470" width="220" height="46" rx="23" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.1)"/>
+    <text x="580" y="28" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="15" fill="#38BDF8" text-anchor="middle">🔥 La Vera Storia di Stallone</text>
+  </g>
+</svg>
