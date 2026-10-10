@@ -8,6 +8,8 @@ Un portale web e Progressive Web App (PWA) moderna, immersiva e curata nei detta
 [![Live Demo on Vercel](https://img.shields.io/badge/Vercel-Deployed-black?style=for-the-badge&logo=vercel)](https://stallone-site.vercel.app/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-red.svg?style=for-the-badge)](LICENSE)
 
+🌐 **Sito Live su Vercel**: [https://stallone-site.vercel.app](https://stallone-site.vercel.app)
+
 ---
 
 ## ✨ Funzionalità Principali
