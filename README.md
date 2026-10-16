@@ -80,4 +80,4 @@ stallone-site/
 
 ## 👤 Autore & Contatti
 
-Realizzato da **Luca Celebrano** ([@Lukecele](https://github.com/Lukecele)).
+Realizzato da [@Lukecele](https://github.com/Lukecele).
