@@ -221,12 +221,19 @@ document.addEventListener('DOMContentLoaded', async () => {
   const openPrivacyBtn = document.getElementById('openPrivacyBtn');
   const openCookieBtn = document.getElementById('openCookieBtn');
   const openCopyrightBtn = document.getElementById('openCopyrightBtn');
+  const cookieBannerLink = document.getElementById('cookieBannerLink');
 
-  function openLegalModal() {
+  function openLegalModal(targetId) {
     if (!legalModalOverlay) return;
     legalModalOverlay.classList.add('open');
     legalModalOverlay.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
+    if (typeof targetId === 'string') {
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        setTimeout(() => targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' }), 60);
+      }
+    }
   }
 
   function closeLegalModalDialog() {
@@ -236,9 +243,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.body.style.overflow = '';
   }
 
-  if (openPrivacyBtn) openPrivacyBtn.addEventListener('click', openLegalModal);
-  if (openCookieBtn) openCookieBtn.addEventListener('click', openLegalModal);
-  if (openCopyrightBtn) openCopyrightBtn.addEventListener('click', openLegalModal);
+  if (openPrivacyBtn) openPrivacyBtn.addEventListener('click', () => openLegalModal('legal-privacy'));
+  if (openCookieBtn) openCookieBtn.addEventListener('click', () => openLegalModal('legal-cookies'));
+  if (openCopyrightBtn) openCopyrightBtn.addEventListener('click', () => openLegalModal('legal-copyright'));
+  if (cookieBannerLink) cookieBannerLink.addEventListener('click', () => openLegalModal('legal-cookies'));
 
   if (closeLegalModal) closeLegalModal.addEventListener('click', closeLegalModalDialog);
   if (modalDismissBtn) modalDismissBtn.addEventListener('click', closeLegalModalDialog);
@@ -250,6 +258,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeLegalModalDialog();
+    if (e.key === 'Escape' && legalModalOverlay && legalModalOverlay.classList.contains('open')) {
+      closeLegalModalDialog();
+    }
   });
 });

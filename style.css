@@ -1644,6 +1644,29 @@ img {
   margin-bottom: 0.35rem;
 }
 
+.legal-email-link,
+.legal-banner-link,
+.footer-disclaimer-card a,
+.modal-body a {
+  color: var(--accent-gold-light);
+  text-decoration: underline;
+  transition: var(--transition-smooth);
+  cursor: pointer;
+}
+
+.legal-email-link:hover,
+.legal-banner-link:hover,
+.footer-disclaimer-card a:hover,
+.modal-body a:hover {
+  color: #ffffff;
+  text-decoration-color: var(--accent-red);
+}
+
+.legal-section {
+  scroll-margin-top: 1rem;
+  margin-bottom: 1.25rem;
+}
+
 .modal-footer {
   padding: 1.2rem 1.8rem;
   border-top: 1px solid var(--border-subtle);
