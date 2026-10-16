@@ -95,25 +95,25 @@ document.addEventListener('DOMContentLoaded', async () => {
     console.warn('Uso dati fallback citazioni:', err);
     allQuotes = [
       {
-        quote: "Tu, io, nessuno può colpire duro come fa la vita. Perciò, andando avanti, non è importante come colpisci: l'importante è come sai resistere ai colpi, come incassi e se una volta a terra hai la forza di rialzarti. Così si vince!",
-        context: "Rocky Balboa (2006) – Il discorso al figlio Robert sotto la pioggia.",
+        quote: "Né io, né tu, nessuno può colpire duro come fa la vita. Perciò, andando avanti, non è importante come colpisci: l'importante è come sai resistere ai colpi, come incassi e se finisci al tappeto hai la forza di rialzarti. Così si vince!",
+        context: "Rocky Balboa (2006) – Il discorso leggendario al figlio Robert sotto la pioggia di Philadelphia (doppiaggio di Massimo Corvo).",
         category: "Rocky Balboa (2006)",
         movie: "Rocky VI",
         icon: "flame"
       },
       {
-        quote: "Tutto quello che voglio fare è restare in piedi alla quindicesima ripresa. Se suona quell'ultimo gong e io sarò ancora in piedi, saprò di non essere soltanto un altro bullo di quartiere.",
-        context: "Rocky (1976) – La notte prima dell'incontro con Apollo Creed.",
-        category: "Rocky I (1976)",
-        movie: "Rocky I",
-        icon: "trophy"
-      },
-      {
-        quote: "Se sai quanto vali, vai e prenditi quello che vali! Ma devi essere pronto a prendere i colpi!",
-        context: "Rocky Balboa (2006) – Sulla dignità personale e sull'autostima.",
+        quote: "Se sai che cosa vali, va' e prenditi quello che vali! Ma devi essere pronto a prendere i colpi, e non puoi puntare il dito e dire: 'Non sono quello che volevo essere per colpa sua, o sua o di chiunque!' Quello lo fanno i vigliacchi. E tu non lo sei: sei molto meglio!",
+        context: "Rocky Balboa (2006) – Sulla responsabilità individuale e sull'autostima contro ogni alibi.",
         category: "Autostima & Responsabilità",
         movie: "Rocky VI",
         icon: "shield"
+      },
+      {
+        quote: "Non ha importanza vincere o perdere. Tutto quello che voglio è arrivare alla fine, restare in piedi alla quindicesima ripresa. Se suona quell'ultimo gong e io sarò ancora in piedi, per la prima volta nella mia vita saprò di non essere soltanto un altro bullo di quartiere.",
+        context: "Rocky (1976) – La confessione ad Adriana la notte prima dell'incontro con Apollo Creed (doppiaggio storico di Ferruccio Amendola).",
+        category: "Rocky I (1976)",
+        movie: "Rocky I",
+        icon: "trophy"
       }
     ];
     renderQuotes(allQuotes);
