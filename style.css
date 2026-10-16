@@ -986,6 +986,7 @@ img {
   width: 42px;
 }
 
+.chapter-info h3,
 .chapter-info h4 {
   font-size: 1.2rem;
   font-weight: 800;
@@ -1250,6 +1251,7 @@ img {
   color: var(--accent-red);
 }
 
+.video-info h3,
 .video-info h4 {
   font-size: 1.15rem;
   font-weight: 800;
@@ -1633,6 +1635,7 @@ img {
   margin-bottom: 2rem;
 }
 
+.footer-disclaimer-card h3,
 .footer-disclaimer-card h5 {
   font-size: 0.85rem;
   text-transform: uppercase;
@@ -1772,7 +1775,8 @@ img {
   color: var(--accent-red);
 }
 
-.cookie-text h4 {
+.cookie-text h4,
+.cookie-text .cookie-title {
   font-size: 1.05rem;
   font-weight: 800;
   color: #fff;
@@ -2112,4 +2116,17 @@ img {
   .video-info {
     padding: 1rem 0.75rem;
   }
+}
+
+/* SEO & Accessibility Hidden Headings */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }

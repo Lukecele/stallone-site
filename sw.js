@@ -1,8 +1,8 @@
-const CACHE_NAME = 'stallone-site-v7';
+const CACHE_NAME = 'stallone-site-v8';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
-  '/style.css?v=2.3.0',
+  '/style.css?v=2.4.0',
   '/script.js?v=2.3.0',
   '/quotes.json?v=2.3.0',
   '/manifest.json',
