@@ -13,7 +13,7 @@ if ('serviceWorker' in navigator) {
 // Database di fallback 100% verificato con doppiaggi autentici italiani
 const FALLBACK_QUOTES = [
   {
-    quote: "Ora ti dirò una cosa scontata: guarda che il mondo non è tutto rose e fiori, è davvero un postaccio misero e sporco e, per quanto forte tu possa essere, se glielo permetti ti mette in ginocchio e ti lascia senza niente per sempre. Né io, né tu, nessuno può colpire duro come fa la vita. Perciò, andando avanti, non è importante come colpisci: l'importante è come sai resistere ai colpi, come incassi e se finisci al tappeto hai la forza di rialzarti. Così sei un vincente! E se credi di essere forte, lo devi dimostrare che sei forte! Perché un uomo vince solo se sa resistere, non se ne va in giro a puntare il dito contro chi non c'entra, accusando prima questo, poi quell'altro di quanto sbaglia! I vigliacchi fanno così, e tu non lo sei, non lo sei affatto! Ma comunque io ti vorrò sempre bene: non può essere altrimenti, tu sei mio figlio, sei il mio sangue, la cosa migliore che ho al mondo. Ma finché non avrai fiducia in te stesso, la tua non sarà vita!",
+    quote: "Ora ti dirò una cosa scontata: guarda che il mondo non è tutto rose e fiori, è davvero un postaccio misero e sporco e, per quanto forte tu possa essere, se glielo permetti ti mette in ginocchio e ti lascia senza niente per sempre. Né io, né tu, nessuno può colpire duro come fa la vita. Perciò, andando avanti, non è importante come colpisci: l'importante è come sai resistere ai colpi, come incassi e se finisci al tappeto hai la forza di rialzarti... così sei un vincente! E se credi di essere forte, lo devi dimostrare che sei forte! Perché un uomo vince solo se sa resistere! Non se ne va in giro a puntare il dito contro chi non c'entra, accusando prima questo, poi quell'altro di quanto sbaglia! I vigliacchi fanno così, e tu non lo sei! Non lo sei affatto! Ma comunque io ti vorrò sempre bene: non può essere altrimenti, tu sei mio figlio, sei il mio sangue, la cosa migliore che ho al mondo. Ma finché non avrai fiducia in te stesso, la tua non sarà vita!",
     context: "Rocky Balboa (2006) – Il celebre discorso al figlio Robert sotto la pioggia di Philadelphia (doppiaggio storico di Massimo Corvo).",
     category: "Rocky Balboa (2006)",
     movie: "Rocky VI (2006)",
@@ -22,7 +22,7 @@ const FALLBACK_QUOTES = [
     videoTitle: "Rocky Balboa – Discorso al Figlio sull'Autostima (Completo HD ITA)"
   },
   {
-    quote: "Se sentirai di non farcela, se sentirai che stai per andare giù, quest'angelo ti sussurrerà nell'orecchio e ti dirà: «Reagisci, brutto figlio di puttana, perché Mickey è con te!». D'accordo? Vai a vincere adesso!",
+    quote: "Lo vedi questo qui? Lo vedi? È la cosa a cui sono più affezionato sulla terra. Lo sai, Rocky Marciano me lo ha regalato. Era un suo gemello... Io adesso lo regalo a te. E sarà come il tuo angelo custode: se sentirai di non farcela, se sentirai che stai per andare giù, quest'angelo ti sussurrerà nell'orecchio e ti dirà: «Reagisci, brutto figlio di puttana, perché Mickey è con te!». D'accordo? Alzati, vigliacco, perché Mickey ti ama!",
     context: "Rocky V (1990) – Il flashback nella vecchia palestra con Mickey che regala a Rocky il gemello di Rocky Marciano (voci storiche di Sergio Fiorentini e Ferruccio Amendola).",
     category: "Lo Spirito di Rocky & Mickey",
     movie: "Rocky V (1990)",
@@ -40,7 +40,7 @@ const FALLBACK_QUOTES = [
     videoTitle: "Rocky I – La 15ª Ripresa, l'Ultimo Gong e l'Amore per Adriana (HD ITA)"
   },
   {
-    quote: "Io apprezzo molto questo, ma forse voi state facendo i vostri interessi... Voi state facendo il vostro lavoro, ma perché dovete impedirmi di fare il mio? Perché se sei disposto a faticare e a lottare per arrivare dove vuoi, chi ha il diritto di fermarti? Chi ha il diritto di dirvi di no? Chi? Nessuno! È un vostro diritto ascoltare il vostro istinto, non è diritto di nessuno dire di no dopo che vi siete guadagnati il diritto di essere dove volete essere e di fare quello che volete fare!",
+    quote: "Vi ringrazio, ma mi sembra che abbiate pensato più al vostro interesse che al mio... Perché quello a cui mi volete obbligare a rinunciare per la vostra tranquillità ha un prezzo troppo alto, altissimo da pagare! Con la scusa di fare il vostro lavoro, mi state impedendo di fare il mio! Se uno supera gli esami, se è idoneo ad affrontare la battaglia che lo separa dal suo obiettivo, chi può fermarlo?! Ma se superi tutte le prove, chi può dirti di no? Chi può dirtelo?! Chi?! Nessuno può dirlo! È un dovere dare ascolto a quello che sentiamo dentro... e se uno si è guadagnato il diritto ad essere quello che è, nessuno glielo toglie! Sapete, più divento vecchio e più cose devo lasciarmi alle spalle: è la vita. L'unica cosa che vi chiedo di lasciare su quel tavolo è un po' di giustizia!",
     context: "Rocky Balboa (2006) – Davanti alla Commissione Pugilistica dello Stato per riottenere la licenza da professionista (voce di Massimo Corvo).",
     category: "Rocky Balboa (2006)",
     movie: "Rocky VI (2006)",
@@ -49,7 +49,7 @@ const FALLBACK_QUOTES = [
     videoTitle: "Rocky Balboa – Davanti alla Commissione Pugilistica (HD ITA)"
   },
   {
-    quote: "Durante questo incontro ho visto cambiare le cose: quello che provavate per me e quello che io provavo per voi. Sul ring eravamo in due disposti a ucciderci a vicenda, ma penso che sia meglio così che milioni di persone! Quello che sto cercando di dire è che se io posso cambiare... e voi potete cambiare... TUTTO IL MONDO PUÒ CAMBIARE!",
+    quote: "Quando sono venuto qui non sapevo cosa mi aspettava. Ho visto che molta gente mi odiava, e io... io non sapevo come la dovevo prendere. Ma durante questo incontro ho visto cambiare le cose: cioè quello che provavate per me e quello che io provavo per voi. Sul ring eravamo in due disposti a ucciderci l'un l'altro, ma penso che sia meglio così che venti milioni di persone! Quello che sto cercando di dire è che se io posso cambiare... e voi potete cambiare... TUTTO IL MONDO PUÒ CAMBIARE!",
     context: "Rocky IV (1985) – Il discorso di Mosca dopo aver battuto Ivan Drago sul ring sovietico (voce indimenticabile di Ferruccio Amendola).",
     category: "Rocky Classici (I - IV)",
     movie: "Rocky IV (1985)",
@@ -67,7 +67,7 @@ const FALLBACK_QUOTES = [
     videoTitle: "Rocky III – Allenamento con Apollo sulla Spiaggia: «Non esiste domani!» (HD ITA)"
   },
   {
-    quote: "Rocky... c'è solo una cosa che voglio chiederti per questo incontro. Voglio che vinci... Vinci! Vinci!",
+    quote: "Rocky: «Senti, stavo pensando: se tu vuoi che io non ci ricombatto con Creed, troveremo un altro sistema per tirare avanti, capito?» — Adriana: «C'è una cosa che voglio che tu faccia per me... Vieni qui... Vinci... Vinci!» — Mickey: «Che cosa stiamo aspettando?! Muoviamoci!»",
     context: "Rocky II (1979) – Il risveglio di Adriana in ospedale che dà a Rocky la benedizione e la carica per tornare sul ring contro Apollo (voci di Simona Izzo e Ferruccio Amendola).",
     category: "Rocky Classici (I - IV)",
     movie: "Rocky II (1979)",
@@ -76,7 +76,7 @@ const FALLBACK_QUOTES = [
     videoTitle: "Rocky II – Il Risveglio di Adriana: «Voglio che vinci!» (HD ITA)"
   },
   {
-    quote: "Non sono il più bello né il più brillante, ma sono quello che lavora più duramente di tutti. Quando gli altri dormivano o si arrendevano, io continuavo a scrivere e a lottare. Preferivo morire di fame con 106 dollari in tasca piuttosto che vendere il mio sogno.",
+    quote: "Il mondo gli ha chiuso tutte le porte in faccia, ma lui ha deciso di abbatterle. Era così al verde da vendere il suo cane per 25 dollari solo per mangiare. Ha scritto Rocky in tre giorni e ha rifiutato offerte da capogiro pur di non vendere la sua anima e recitare nel film: preferiva morire di fame piuttosto che rinunciare al suo sogno. Non importa quante volte cadi, ma quante volte ti rialzi e continui ad andare avanti. È questo che fa di una persona un vincitore!",
     context: "Sylvester Stallone (1975) – Il rifiuto di 350.000 dollari per il copione pur di interpretare lui stesso Rocky sul grande schermo.",
     category: "La Vera Storia di Sly",
     movie: "Vita Reale",
