@@ -1,5 +1,5 @@
 // Service Worker per PWA Offline Caching e massima velocità
-const CACHE_NAME = 'stallone-site-v1';
+const CACHE_NAME = 'stallone-site-v2';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -12,6 +12,7 @@ const STATIC_ASSETS = [
   '/assets/icon-512.png',
   '/assets/apple-touch-icon.png',
   '/assets/og-image.svg',
+  '/assets/og-image.png',
   '/assets/images/stallone_venice.jpg',
   '/assets/images/rocky_vintage_1977.jpg',
   '/assets/images/stallone_cannes.jpg',

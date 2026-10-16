@@ -4,6 +4,7 @@
   "description": "Portale celebrativo sulla resilienza, la vita e i leggendari discorsi motivazionali di Sylvester Stallone e Rocky Balboa.",
   "start_url": "/",
   "id": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#060303",
   "theme_color": "#060303",
