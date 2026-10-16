@@ -1,22 +1,101 @@
 // script.js – Stallone & Rocky Balboa Legacy
-// PWA Service Worker, Mobile Drawer, Quotes Filtering, Daily Inspiration, Modal
+// PWA Service Worker, Mobile Drawer, Video Gallery Filtering & Search, Daily Inspiration, Modal
 
 // Registrazione Service Worker per PWA
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
+    navigator.serviceWorker.register('/sw.js?v=2.2.0')
       .then((reg) => console.log('PWA ServiceWorker registrato con successo:', reg.scope))
       .catch((err) => console.warn('PWA ServiceWorker errore:', err));
   });
 }
+
+// Database di fallback 100% verificato con doppiaggi autentici italiani
+const FALLBACK_QUOTES = [
+  {
+    quote: "Ora ti dirò una cosa scontata: guarda che il mondo non è tutto rose e fiori, è davvero un postaccio misero e sporco e, per quanto forte tu possa essere, se glielo permetti ti mette in ginocchio e ti lascia senza niente per sempre. Né io, né tu, nessuno può colpire duro come fa la vita. Perciò, andando avanti, non è importante come colpisci: l'importante è come sai resistere ai colpi, come incassi e se finisci al tappeto hai la forza di rialzarti. Così sei un vincente! E se credi di essere forte, lo devi dimostrare che sei forte! Perché un uomo vince solo se sa resistere, non se ne va in giro a puntare il dito contro chi non c'entra, accusando prima questo, poi quell'altro di quanto sbaglia! I vigliacchi fanno così, e tu non lo sei, non lo sei affatto! Ma comunque io ti vorrò sempre bene: non può essere altrimenti, tu sei mio figlio, sei il mio sangue, la cosa migliore che ho al mondo. Ma finché non avrai fiducia in te stesso, la tua non sarà vita!",
+    context: "Rocky Balboa (2006) – Il celebre discorso al figlio Robert sotto la pioggia di Philadelphia (doppiaggio storico di Massimo Corvo).",
+    category: "Rocky Balboa (2006)",
+    movie: "Rocky VI (2006)",
+    icon: "flame",
+    videoId: "iAXf67fqBuM",
+    videoTitle: "Rocky Balboa – Discorso al Figlio sull'Autostima (Completo HD ITA)"
+  },
+  {
+    quote: "Se sentirai di non farcela, se sentirai che stai per andare giù, quest'angelo ti sussurrerà nell'orecchio e ti dirà: «Reagisci, brutto figlio di puttana, perché Mickey è con te!». D'accordo? Vai a vincere adesso!",
+    context: "Rocky V (1990) – Il flashback nella vecchia palestra con Mickey che regala a Rocky il gemello di Rocky Marciano (voci storiche di Sergio Fiorentini e Ferruccio Amendola).",
+    category: "Lo Spirito di Rocky & Mickey",
+    movie: "Rocky V (1990)",
+    icon: "shield",
+    videoId: "GlVcfEegeY0",
+    videoTitle: "Rocky V – Il Flashback di Mickey & Il Gemello di Rocky Marciano (HD ITA)"
+  },
+  {
+    quote: "In fondo chi se ne frega se perdo questo incontro, non mi frega niente neanche se mi spacca la testa, perché l'unica cosa che voglio è resistere: nessuno è mai riuscito a resistere con Creed. Se io riesco a reggere alla distanza, e se quando suona l'ultimo gong io sono ancora in piedi... se sono ancora in piedi, saprò per la prima volta in vita mia che non sono soltanto un bullo di periferia.",
+    context: "Rocky (1976) – La notte prima dell'incontro e nello spogliatoio con Mickey prima del match contro Apollo Creed (doppiaggio leggendario di Gigi Proietti).",
+    category: "Rocky Classici (I - IV)",
+    movie: "Rocky I (1976)",
+    icon: "trophy",
+    videoId: "nAxU48O0Ln4",
+    videoTitle: "Rocky I – La 15ª Ripresa, l'Ultimo Gong e l'Amore per Adriana (HD ITA)"
+  },
+  {
+    quote: "Io apprezzo molto questo, ma forse voi state facendo i vostri interessi... Voi state facendo il vostro lavoro, ma perché dovete impedirmi di fare il mio? Perché se sei disposto a faticare e a lottare per arrivare dove vuoi, chi ha il diritto di fermarti? Chi ha il diritto di dirvi di no? Chi? Nessuno! È un vostro diritto ascoltare il vostro istinto, non è diritto di nessuno dire di no dopo che vi siete guadagnati il diritto di essere dove volete essere e di fare quello che volete fare!",
+    context: "Rocky Balboa (2006) – Davanti alla Commissione Pugilistica dello Stato per riottenere la licenza da professionista (voce di Massimo Corvo).",
+    category: "Rocky Balboa (2006)",
+    movie: "Rocky VI (2006)",
+    icon: "award",
+    videoId: "KGc-B-o2B6I",
+    videoTitle: "Rocky Balboa – Davanti alla Commissione Pugilistica (HD ITA)"
+  },
+  {
+    quote: "Durante questo incontro ho visto cambiare le cose: quello che provavate per me e quello che io provavo per voi. Sul ring eravamo in due disposti a ucciderci a vicenda, ma penso che sia meglio così che milioni di persone! Quello che sto cercando di dire è che se io posso cambiare... e voi potete cambiare... TUTTO IL MONDO PUÒ CAMBIARE!",
+    context: "Rocky IV (1985) – Il discorso di Mosca dopo aver battuto Ivan Drago sul ring sovietico (voce indimenticabile di Ferruccio Amendola).",
+    category: "Rocky Classici (I - IV)",
+    movie: "Rocky IV (1985)",
+    icon: "sparkles",
+    videoId: "NUtIjV3O58A",
+    videoTitle: "Rocky IV – Il Discorso di Mosca: «Tutto il mondo può cambiare!» (HD ITA)"
+  },
+  {
+    quote: "Domani... continuiamo domani?! Non esiste domani! Non esiste domani, Rocky! Non c'è nessun domani! Devi farlo adesso! Ci serve l'occhio della tigre, Rocky!",
+    context: "Rocky III (1982) – Apollo Creed che scuote Rocky sulla spiaggia per ritrovare la fame del vero combattente (doppiaggio magistrale di Vittorio Di Prima).",
+    category: "Rocky Classici (I - IV)",
+    movie: "Rocky III (1982)",
+    icon: "compass",
+    videoId: "2lOEpoi4x7E",
+    videoTitle: "Rocky III – Allenamento con Apollo sulla Spiaggia: «Non esiste domani!» (HD ITA)"
+  },
+  {
+    quote: "Rocky... c'è solo una cosa che voglio chiederti per questo incontro. Voglio che vinci... Vinci! Vinci!",
+    context: "Rocky II (1979) – Il risveglio di Adriana in ospedale che dà a Rocky la benedizione e la carica per tornare sul ring contro Apollo (voci di Simona Izzo e Ferruccio Amendola).",
+    category: "Rocky Classici (I - IV)",
+    movie: "Rocky II (1979)",
+    icon: "heart",
+    videoId: "7WMyd7akN0Y",
+    videoTitle: "Rocky II – Il Risveglio di Adriana: «Voglio che vinci!» (HD ITA)"
+  },
+  {
+    quote: "Non sono il più bello né il più brillante, ma sono quello che lavora più duramente di tutti. Quando gli altri dormivano o si arrendevano, io continuavo a scrivere e a lottare. Preferivo morire di fame con 106 dollari in tasca piuttosto che vendere il mio sogno.",
+    context: "Sylvester Stallone (1975) – Il rifiuto di 350.000 dollari per il copione pur di interpretare lui stesso Rocky sul grande schermo.",
+    category: "La Vera Storia di Sly",
+    movie: "Vita Reale",
+    icon: "star",
+    videoId: "WX9hJ7aDoH0",
+    videoTitle: "Sylvester Stallone – Dal Nulla al Mito Mondiale (HD ITA)"
+  }
+];
+
+let allQuotes = [...FALLBACK_QUOTES];
+let activeCategoryFilter = 'all';
+let searchQuery = '';
+let toastTimeout = null;
 
 document.addEventListener('DOMContentLoaded', async () => {
   // Inizializza icone Lucide
   if (window.lucide) {
     window.lucide.createIcons();
   }
-
-  let allQuotes = [];
 
   // ==========================================
   // Mobile Drawer Navigation (Touch & Accessible)
@@ -81,73 +160,109 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   // ==========================================
-  // Caricamento Citazioni da quotes.json
+  // Caricamento Dati Citazioni per Generatore
   // ==========================================
-  const quoteContainer = document.getElementById('quote-list');
   try {
-    const res = await fetch('quotes.json');
-    if (!res.ok) throw new Error('Fetch error');
-    allQuotes = await res.json();
-    renderQuotes(allQuotes);
-    setupFilters();
-    setupDailyQuoteGenerator(allQuotes);
-  } catch (err) {
-    console.warn('Uso dati fallback citazioni:', err);
-    allQuotes = [
-      {
-        quote: "Ora ti dirò una cosa scontata: guarda che il mondo non è tutto rose e fiori, è davvero un postaccio misero e sporco e, per quanto forte tu possa essere, se glielo permetti ti mette in ginocchio e ti lascia senza niente per sempre. Né io, né tu, nessuno può colpire duro come fa la vita. Perciò, andando avanti, non è importante come colpisci: l'importante è come sai resistere ai colpi, come incassi e se finisci al tappeto hai la forza di rialzarti. Così sei un vincente!",
-        context: "Rocky Balboa (2006) – Il celebre discorso al figlio Robert sotto la pioggia di Philadelphia (doppiaggio storico di Massimo Corvo).",
-        category: "Rocky Balboa (2006)",
-        movie: "Rocky VI",
-        icon: "flame"
-      },
-      {
-        quote: "E se credi di essere forte, lo devi dimostrare che sei forte! Perché un uomo vince solo se sa resistere, non se ne va in giro a puntare il dito contro chi non c'entra, accusando prima questo, poi quell'altro di quanto sbaglia! I vigliacchi fanno così, e tu non lo sei, non lo sei affatto!",
-        context: "Rocky Balboa (2006) – Sulla responsabilità personale e sul rifiuto di cercare alibi negli altri.",
-        category: "Autostima & Responsabilità",
-        movie: "Rocky VI",
-        icon: "shield"
-      },
-      {
-        quote: "Non ha importanza vincere o perdere. Nessuno è mai riuscito a resistere quindici riprese contro Apollo Creed. Se suona quell'ultimo gong e io sarò ancora in piedi, per la prima volta nella mia vita saprò di non essere soltanto uno scemo del quartiere.",
-        context: "Rocky (1976) – La confessione ad Adriana la notte prima dell'incontro con Apollo Creed (voce indimenticabile di Ferruccio Amendola).",
-        category: "Rocky I (1976)",
-        movie: "Rocky I",
-        icon: "trophy"
+    const res = await fetch('quotes.json?v=2.2.0');
+    if (res.ok) {
+      const data = await res.json();
+      if (Array.isArray(data) && data.length > 0) {
+        allQuotes = data;
       }
-    ];
-    renderQuotes(allQuotes);
-    setupFilters();
-    setupDailyQuoteGenerator(allQuotes);
+    }
+  } catch (err) {
+    console.info('Uso citazioni fallback autentiche:', err);
   }
 
-  function renderQuotes(quotes) {
-    if (!quoteContainer) return;
-    quoteContainer.innerHTML = '';
+  setupSearchAndFilters();
+  setupQuoteActions();
+  setupDailyQuoteGenerator(allQuotes);
 
-    quotes.forEach((item) => {
-      const card = document.createElement('article');
-      card.className = 'quote-card';
-      card.innerHTML = `
-        <div>
-          <div class="quote-card-header">
-            <span class="quote-badge">${item.movie || item.category || 'Mito'}</span>
-            <i data-lucide="${item.icon || 'flame'}"></i>
-          </div>
-          <p class="quote-text">«${item.quote}»</p>
-        </div>
-        <p class="quote-context">${item.context || 'Rocky Balboa'}</p>
-      `;
-      quoteContainer.appendChild(card);
+  // ==========================================
+  // Filtri Categorie & Ricerca Real-Time
+  // ==========================================
+  function filterVideoCards() {
+    const cards = document.querySelectorAll('#videoGrid .video-card');
+    const emptyState = document.getElementById('videoEmptyState');
+    const emptyStateMsg = document.getElementById('emptyStateMsg');
+    const query = searchQuery.trim().toLowerCase();
+
+    let visibleCount = 0;
+
+    cards.forEach((card) => {
+      const cardCategory = card.getAttribute('data-category') || '';
+      const matchesCategory = (activeCategoryFilter === 'all' || cardCategory === activeCategoryFilter);
+
+      const textContent = (card.innerText || '').toLowerCase();
+      const matchesSearch = (query === '' || textContent.includes(query));
+
+      if (matchesCategory && matchesSearch) {
+        card.style.display = '';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
     });
 
-    if (window.lucide) {
-      window.lucide.createIcons();
+    if (emptyState) {
+      if (visibleCount === 0) {
+        emptyState.style.display = 'block';
+        if (emptyStateMsg) {
+          if (query) {
+            emptyStateMsg.innerHTML = `Nessuna scena corrisponde a «<strong>${escapeHtml(query)}</strong>». Prova con termini come <em>Mickey</em>, <em>figlio</em>, <em>Adriana</em> o <em>Apollo</em>.`;
+          } else {
+            emptyStateMsg.textContent = `Nessuna scena presente per la categoria selezionata.`;
+          }
+        }
+      } else {
+        emptyState.style.display = 'none';
+      }
     }
   }
 
-  function setupFilters() {
-    const filterButtons = document.querySelectorAll('.filter-btn');
+  function setupSearchAndFilters() {
+    const searchInput = document.getElementById('quoteSearch');
+    const clearBtn = document.getElementById('clearSearchBtn');
+    const resetBtn = document.getElementById('resetVideoFilterBtn');
+    const filterButtons = document.querySelectorAll('#categoryFilters .filter-btn');
+
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value;
+        if (clearBtn) {
+          clearBtn.style.display = searchQuery.length > 0 ? 'block' : 'none';
+        }
+        filterVideoCards();
+      });
+    }
+
+    if (clearBtn && searchInput) {
+      clearBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        searchQuery = '';
+        clearBtn.style.display = 'none';
+        searchInput.focus();
+        filterVideoCards();
+      });
+    }
+
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        searchQuery = '';
+        activeCategoryFilter = 'all';
+        if (searchInput) {
+          searchInput.value = '';
+          if (clearBtn) clearBtn.style.display = 'none';
+        }
+        filterButtons.forEach((b) => {
+          const isAll = b.getAttribute('data-filter') === 'all';
+          b.classList.toggle('active', isAll);
+          b.setAttribute('aria-selected', isAll ? 'true' : 'false');
+        });
+        filterVideoCards();
+      });
+    }
+
     filterButtons.forEach((btn) => {
       btn.addEventListener('click', () => {
         filterButtons.forEach((b) => {
@@ -157,17 +272,69 @@ document.addEventListener('DOMContentLoaded', async () => {
         btn.classList.add('active');
         btn.setAttribute('aria-selected', 'true');
 
-        const filter = btn.getAttribute('data-filter');
-        if (filter === 'all') {
-          renderQuotes(allQuotes);
-        } else {
-          const filtered = allQuotes.filter((q) => q.category === filter);
-          renderQuotes(filtered);
-        }
+        activeCategoryFilter = btn.getAttribute('data-filter') || 'all';
+        filterVideoCards();
       });
     });
   }
 
+  // ==========================================
+  // Azioni Citazioni: Copia & Condividi
+  // ==========================================
+  function setupQuoteActions() {
+    const grid = document.getElementById('videoGrid');
+    if (!grid) return;
+
+    grid.addEventListener('click', (e) => {
+      // 1. Copia negli appunti
+      const copyBtn = e.target.closest('.btn-copy-quote');
+      if (copyBtn) {
+        const quote = copyBtn.getAttribute('data-quote') || '';
+        const context = copyBtn.getAttribute('data-context') || '';
+        const fullText = `«${quote}»\n– ${context}\n\n[Rocky Balboa Legacy: https://stallone-site.vercel.app]`;
+
+        navigator.clipboard.writeText(fullText).then(() => {
+          showToast('Citazione copiata negli appunti!', 'check-circle');
+        }).catch(() => {
+          showToast('Errore durante la copia della citazione', 'alert-circle');
+        });
+        return;
+      }
+
+      // 2. Condividi con Web Share API o fallback a copia
+      const shareBtn = e.target.closest('.btn-share-quote');
+      if (shareBtn) {
+        const quote = shareBtn.getAttribute('data-quote') || '';
+        const context = shareBtn.getAttribute('data-context') || '';
+        if (navigator.share) {
+          navigator.share({
+            title: 'Sylvester Stallone & Rocky Balboa Legacy',
+            text: `«${quote}» – ${context}`,
+            url: window.location.href
+          }).catch((err) => {
+            if (err.name !== 'AbortError') {
+              copyToClipboardDirect(`«${quote}»\n– ${context}`);
+            }
+          });
+        } else {
+          copyToClipboardDirect(`«${quote}»\n– ${context}`);
+        }
+      }
+    });
+  }
+
+  function copyToClipboardDirect(text) {
+    const fullText = `${text}\n\n[Rocky Balboa Legacy: https://stallone-site.vercel.app]`;
+    navigator.clipboard.writeText(fullText).then(() => {
+      showToast('Testo copiato per la condivisione!', 'share-2');
+    }).catch(() => {
+      showToast('Impossibile copiare il testo', 'alert-circle');
+    });
+  }
+
+  // ==========================================
+  // Generatore Citazione del Giorno
+  // ==========================================
   function setupDailyQuoteGenerator(quotes) {
     const textEl = document.getElementById('dailyQuoteText');
     const ctxEl = document.getElementById('dailyQuoteContext');
@@ -263,3 +430,56 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   });
 });
+
+// ==========================================
+// Toast Notification Utility
+// ==========================================
+function showToast(message, iconName = 'check-circle') {
+  const toast = document.getElementById('toastNotification');
+  const toastMsg = document.getElementById('toastMessage');
+  if (!toast || !toastMsg) return;
+
+  toastMsg.textContent = message;
+
+  const oldIcon = toast.querySelector('.toast-icon');
+  if (oldIcon) {
+    const newIcon = document.createElement('i');
+    newIcon.setAttribute('data-lucide', iconName);
+    newIcon.className = 'toast-icon';
+    toast.replaceChild(newIcon, oldIcon);
+    if (window.lucide) lucide.createIcons();
+  }
+
+  toast.classList.add('show');
+
+  if (toastTimeout) {
+    clearTimeout(toastTimeout);
+  }
+
+  toastTimeout = setTimeout(() => {
+    toast.classList.remove('show');
+  }, 3200);
+}
+
+// ==========================================
+// Utility: Sanitizzazione HTML & Attributi
+// ==========================================
+function escapeHtml(str) {
+  if (typeof str !== 'string') return '';
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function escapeAttribute(str) {
+  if (typeof str !== 'string') return '';
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}

@@ -1,11 +1,11 @@
 // Service Worker per PWA Offline Caching e massima velocità
-const CACHE_NAME = 'stallone-site-v2';
+const CACHE_NAME = 'stallone-site-v4';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
-  '/style.css',
-  '/script.js',
-  '/quotes.json',
+  '/style.css?v=2.3.0',
+  '/script.js?v=2.3.0',
+  '/quotes.json?v=2.3.0',
   '/manifest.json',
   '/assets/favicon.svg',
   '/assets/icon-192.png',
@@ -33,6 +33,7 @@ self.addEventListener('activate', (event) => {
       return Promise.all(
         keys.map((key) => {
           if (key !== CACHE_NAME) {
+            console.log('[SW] Rimozione vecchia cache:', key);
             return caches.delete(key);
           }
         })
