@@ -240,6 +240,28 @@ img {
   box-shadow: 0 6px 22px rgba(239, 68, 68, 0.5);
 }
 
+.nav-github-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.nav-github-link:hover {
+  background: rgba(239, 68, 68, 0.25);
+  border-color: #ef4444;
+  color: #fde047;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(239, 68, 68, 0.4);
+}
+
 /* Mobile Hamburger Toggle */
 .mobile-toggle {
   display: none;
@@ -1373,6 +1395,18 @@ img {
   align-items: center;
   font-size: 0.82rem;
   color: var(--text-dim);
+}
+
+.footer-credit-link {
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-color: rgba(239, 68, 68, 0.5);
+  transition: var(--transition-smooth);
+}
+
+.footer-credit-link:hover {
+  color: #fde047;
+  text-decoration-color: #fde047;
 }
 
 .back-to-top {
