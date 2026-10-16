@@ -95,22 +95,22 @@ document.addEventListener('DOMContentLoaded', async () => {
     console.warn('Uso dati fallback citazioni:', err);
     allQuotes = [
       {
-        quote: "Né io, né tu, nessuno può colpire duro come fa la vita. Perciò, andando avanti, non è importante come colpisci: l'importante è come sai resistere ai colpi, come incassi e se finisci al tappeto hai la forza di rialzarti. Così si vince!",
-        context: "Rocky Balboa (2006) – Il discorso leggendario al figlio Robert sotto la pioggia di Philadelphia (doppiaggio di Massimo Corvo).",
+        quote: "Ora ti dirò una cosa scontata: guarda che il mondo non è tutto rose e fiori, è davvero un postaccio misero e sporco e, per quanto forte tu possa essere, se glielo permetti ti mette in ginocchio e ti lascia senza niente per sempre. Né io, né tu, nessuno può colpire duro come fa la vita. Perciò, andando avanti, non è importante come colpisci: l'importante è come sai resistere ai colpi, come incassi e se finisci al tappeto hai la forza di rialzarti. Così sei un vincente!",
+        context: "Rocky Balboa (2006) – Il celebre discorso al figlio Robert sotto la pioggia di Philadelphia (doppiaggio storico di Massimo Corvo).",
         category: "Rocky Balboa (2006)",
         movie: "Rocky VI",
         icon: "flame"
       },
       {
-        quote: "Se sai che cosa vali, va' e prenditi quello che vali! Ma devi essere pronto a prendere i colpi, e non puoi puntare il dito e dire: 'Non sono quello che volevo essere per colpa sua, o sua o di chiunque!' Quello lo fanno i vigliacchi. E tu non lo sei: sei molto meglio!",
-        context: "Rocky Balboa (2006) – Sulla responsabilità individuale e sull'autostima contro ogni alibi.",
+        quote: "E se credi di essere forte, lo devi dimostrare che sei forte! Perché un uomo vince solo se sa resistere, non se ne va in giro a puntare il dito contro chi non c'entra, accusando prima questo, poi quell'altro di quanto sbaglia! I vigliacchi fanno così, e tu non lo sei, non lo sei affatto!",
+        context: "Rocky Balboa (2006) – Sulla responsabilità personale e sul rifiuto di cercare alibi negli altri.",
         category: "Autostima & Responsabilità",
         movie: "Rocky VI",
         icon: "shield"
       },
       {
-        quote: "Non ha importanza vincere o perdere. Tutto quello che voglio è arrivare alla fine, restare in piedi alla quindicesima ripresa. Se suona quell'ultimo gong e io sarò ancora in piedi, per la prima volta nella mia vita saprò di non essere soltanto un altro bullo di quartiere.",
-        context: "Rocky (1976) – La confessione ad Adriana la notte prima dell'incontro con Apollo Creed (doppiaggio storico di Ferruccio Amendola).",
+        quote: "Non ha importanza vincere o perdere. Nessuno è mai riuscito a resistere quindici riprese contro Apollo Creed. Se suona quell'ultimo gong e io sarò ancora in piedi, per la prima volta nella mia vita saprò di non essere soltanto uno scemo del quartiere.",
+        context: "Rocky (1976) – La confessione ad Adriana la notte prima dell'incontro con Apollo Creed (voce indimenticabile di Ferruccio Amendola).",
         category: "Rocky I (1976)",
         movie: "Rocky I",
         icon: "trophy"
