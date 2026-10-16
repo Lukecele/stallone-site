@@ -1,4 +1,4 @@
-const CACHE_NAME = 'stallone-site-v6';
+const CACHE_NAME = 'stallone-site-v7';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
