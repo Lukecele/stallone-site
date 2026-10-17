@@ -78,6 +78,19 @@ stallone-site/
 
 ---
 
+## ⚖️ Note Legali, Licenza Gratuita & Diritto d'Autore
+
+- **Licenza di Utilizzo Gratuito (MIT License)**: Il codice sorgente dell'interfaccia grafica e dell'applicazione web è distribuito gratuitamente sotto [Licenza MIT](LICENSE). Chiunque è libero di consultare, studiare, copiare, biforcare (*fork*) e riutilizzare il codice per scopi legittimi e non commerciali.
+- **Natura del Progetto (100% No-Profit)**: Questo sito web è un'opera no-profit ad uso culturale, cinematografico, commemorativo e didattico, priva di qualsiasi finalità commerciale, monetizzazione o scopo di lucro.
+- **Assoluta Assenza di Rivendicazione di Copyright su Sylvester Stallone e Rocky**: Il nome e l'immagine di Sylvester Stallone, i personaggi di Rocky Balboa e Rambo, i marchi e i dialoghi cinematografici appartengono inderogabilmente ed esclusivamente a **Sylvester Stallone**, **Balboa Productions**, **Metro-Goldwyn-Mayer Studios Inc. (MGM)** e **United Artists Corporation**. Sanctuary / Stallone-Site e il suo autore **non rivendicano alcun diritto d'autore o proprietà intellettuale** su tali opere.
+- **Diritto di Citazione (Art. 70 L. 633/1941 & Direttiva UE 2001/29/CE)**: Le frasi, i monologhi e i riferimenti filmici sono riportati in conformità all'art. 70 della Legge 633/1941 sul diritto d'autore e ai principi del *Fair Use*, per finalità illustrative, didattiche e di critica cinematografica. L'uso dell'immagine avviene ai sensi degli artt. 96 e 97 L. 633/1941 (personaggio di notorietà pubblica per fini culturali).
+- **Incorporamento Video (YouTube IFrame API)**: I video sono incorporati tramite player ufficiale YouTube in conformità alla giurisprudenza della Corte di Giustizia dell'Unione Europea (*sentenze Svensson C-466/12 e BestWater C-348/13*). Nessun file multimediale risiede sui server del sito.
+- **Notice & Take Down**: I titolari dei diritti possono richiedere in qualsiasi momento la modifica o rimozione tempestiva scrivendo a `luca.celebrano1@gmail.com` o aprendo una segnalazione su [GitHub Issues](https://github.com/Lukecele/stallone-site/issues). Per i dettagli legali completi consultare [LEGAL.md](LEGAL.md).
+
+---
+
 ## 👤 Autore & Contatti
 
 Realizzato da [@Lukecele](https://github.com/Lukecele).
+- **Sito Live**: [https://stallone-site.vercel.app](https://stallone-site.vercel.app)
+- **Licenza**: [MIT License (Gratuita & No-Profit)](LICENSE)
